@@ -7,7 +7,7 @@ export const useTodoStore = create((set) => ({
       todos: [
         ...state.todos,
         {
-          test: todoText,
+          text: todoText,
           id: getId(),
           isCompleted: false,
         },
@@ -26,6 +26,7 @@ export const useTodoStore = create((set) => ({
             isCompleted: true,
           };
         }
+        return todo;
       }),
     })),
 }));
